@@ -1,15 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public SentenceData sentenceData;
-    private string _name;
-    
-    public void ReadStringInput(string s)
+   // public SentenceData sentenceData;
+    public TextMeshProUGUI text;
+    public SentenceData sd;
+    public void Start()
     {
-        _name = s;
-        Debug.Log(s);
+	    text.text = sd.sentence;
+	    
     }
 }
